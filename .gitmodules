@@ -1,0 +1,15 @@
+[submodule "lib-dump"]
+	path = lib-dump
+	url = https://github.com/cviebig/lib-dump
+[submodule "lib-dump-sql"]
+	path = lib-dump-sql
+	url = https://github.com/cviebig/lib-dump-sql
+[submodule "lib-sql"]
+	path = lib-sql
+	url = https://github.com/cviebig/lib-sql
+[submodule "lib-sql-text"]
+	path = lib-sql-text
+	url = https://github.com/cviebig/lib-sql-text
+[submodule "bin-dump-sql-text"]
+	path = bin-dump-sql-text
+	url = https://github.com/cviebig/bin-dump-sql-text
