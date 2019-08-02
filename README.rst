@@ -10,3 +10,40 @@ of
 - SQL parse tree dumper `lib-dump-sql/ <https://github.com/cviebig/lib-dump-sql>`_
 - Interactive shell for parsing and dumping in `bin-dump-sql-text/
   <https://github.com/cviebig/bin-dump-sql-text>`_
+
+Build time dependencies
+-----------------------
+
+- Catch2
+- CMake
+- Boost
+
+Runtime dependencies
+--------------------
+
+- Boost
+
+Docker support
+--------------
+
+This project is coming for convenience reasons with Dockerfiles to create a
+build and runtime environment. However it's use is only optional. See the
+subdirectory `docker/ <https://github.com/cviebig/sql/tree/master/docker>` for
+more info.
+
+Example usage from this directory:
+
+.. code-block:: sh
+
+  export PROJECT_NAME=projsql
+  export BUILD_DIR=$HOME/tmp/projsql_build
+  export OUTPUT_DIR=$HOME/tmp/projsql
+  export CXX=/usr/bin/clang++
+  export CC=/usr/bin/clang
+  docker/setup
+  docker/configure Release
+  docker/build dump-sql-text
+  docker/execute dump-sql-text -i
+  docker/execute valgrind --tool=memcheck --leak-check=full /home/user/build/test/dump-sql-text -i
+  docker/cleanup
+  docker/remove
