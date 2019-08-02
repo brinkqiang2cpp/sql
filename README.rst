@@ -28,7 +28,7 @@ Docker support
 
 This project is coming for convenience reasons with Dockerfiles to create a
 build and runtime environment. However it's use is only optional. See the
-subdirectory `docker/ <https://github.com/cviebig/sql/tree/master/docker>` for
+subdirectory `docker/ <https://github.com/cviebig/sql/tree/master/docker>`_ for
 more info.
 
 Example usage from this directory:
